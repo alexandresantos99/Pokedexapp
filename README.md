@@ -35,6 +35,10 @@ Segue a imagem exemplificando
 
 O objetivo funcional é listar todos os Pokémons em uma lista infinita e, ao tocar em algum deles, exibir a tela de detalhes do Pokémon correspondente.
 
+<p align="center">
+<img src="assets/readme/list.gif" width="216" height="400"/>  <img src="assets/readme/details.gif" width="216" height="400"/>
+</p>
+
 Tem como objetivo técnico, ser um dos módulos (features) exemplo do projeto, ele foi desenvolvido usando Clean Architecture em conjunto com arquitetura MVVM para fazer as tratativas de apresentação e Repository Pattern para as tratativas de acesso aos dados.
 
 A base para escolha das arquiteturas escolhidas foi com base em sua flexibilidade, o que significa que esse módulo pode se adaptar facilmente a mudanças, como alterações no contrato da API, mudanças completas nas telas ou alterações no comportamento de armazenamento de dados. Além disso, outro aspecto importante é que essa estrutura pode ser facilmente testada em suas principais camadas de forma unitária.

@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.alexandresantos.pokedexbyalexandre'
+    compileSdk Config.INSTANCE.compileSdk
+
+    defaultConfig {
+        applicationId "com.alexandresantos.pokedexbyalexandre"
+        minSdk Config.INSTANCE.minSdk
+        targetSdk Config.INSTANCE.targetSdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility Config.INSTANCE.javaVersion
+        targetCompatibility Config.INSTANCE.javaVersion
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.3.2'
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    implementation project(path: ':features')
+    implementation Deps.INSTANCE.androidx_activity_compose
+
+}

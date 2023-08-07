@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application android:name=".PokedexApplication">
+        <activity
+            android:name=".Pokedex"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"
+            android:label="Pokedex"
+            android:theme="@style/Theme.PokedexByAlexandre">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.example.com"
+                    android:scheme="https" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>

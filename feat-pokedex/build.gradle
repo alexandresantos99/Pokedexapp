@@ -1,0 +1,105 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.alexandresantos.features'
+    compileSdk Config.INSTANCE.compileSdk
+
+    defaultConfig {
+        minSdk Config.INSTANCE.minSdk
+        targetSdk Config.INSTANCE.targetSdk
+
+        testInstrumentationRunner "com.alexandresantos.features.presenter.InstrumentationTestRunner"
+
+        consumerProguardFiles "consumer-rules.pro"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    testOptions {
+        //  execution 'ANDROIDX_TEST_ORCHESTRATOR'
+    }
+
+    compileOptions {
+        sourceCompatibility Config.INSTANCE.javaVersion
+        targetCompatibility Config.INSTANCE.javaVersion
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.3.2'
+    }
+    packagingOptions {
+        resources {
+            resources.excludes.add("/META-INF/{AL2.0,LGPL2.1}")
+            resources.excludes.add("META-INF/LICENSE.md")
+            resources.excludes.add("META-INF/LICENSE-notice.md")
+        }
+    }
+}
+
+dependencies {
+    implementation project(path: ':commons')
+
+    implementation Deps.INSTANCE.androidx_core_ktx
+    implementation Deps.INSTANCE.androidx_lifecycle
+    implementation Deps.INSTANCE.androidx_activity_compose
+
+    implementation Deps.INSTANCE.androidx_compose_ui
+    implementation Deps.INSTANCE.androidx_compose_ui_graphics
+    implementation Deps.INSTANCE.androidx_compose_ui_preview
+    implementation Deps.INSTANCE.androidx_compose_material3
+    implementation platform(Deps.INSTANCE.androidx_compose_bom_platform)
+
+    //Testing Dependencies:
+    testImplementation Deps.INSTANCE.testlib_junit
+    testImplementation Deps.INSTANCE.testlib_mockk
+    testImplementation Deps.INSTANCE.testlib_mockito
+    testImplementation Deps.INSTANCE.testlib_coroutines
+    androidTestImplementation Deps.INSTANCE.testandroidx_runner
+    androidTestImplementation Deps.INSTANCE.testlib_mockk_android
+    androidTestImplementation Deps.INSTANCE.test_lib_koin
+    testImplementation Deps.INSTANCE.testandroidx_rules
+    androidTestImplementation Deps.INSTANCE.testlib_archComponent
+    androidTestImplementation Deps.INSTANCE.testlib_junitext
+    androidTestImplementation Deps.INSTANCE.testandroidx_espressocore
+    androidTestImplementation Deps.INSTANCE.testlib_compose_junit_ui
+    androidTestImplementation Deps.INSTANCE.testlib_navigation_test
+    debugImplementation Deps.INSTANCE.testelib_compose_manifest
+
+    //Dependency Injection and Navigation:
+    implementation Deps.INSTANCE.koin
+    implementation Deps.INSTANCE.navigationCompose
+
+    //Retrofit and Networking:
+    implementation Deps.INSTANCE.retrofit
+    implementation Deps.INSTANCE.retrofit_gson
+    implementation Deps.INSTANCE.http
+    androidTestImplementation Deps.INSTANCE.testlib_webserver
+    implementation Deps.INSTANCE.logInterceptor
+
+
+    //Kotlin Coroutines:
+    implementation Deps.INSTANCE.lib_kt_coroutines
+
+    // Serialization:
+    implementation Deps.INSTANCE.serialization_json
+
+    //Image Loading and Processing:
+    implementation Deps.INSTANCE.coil
+    implementation Deps.INSTANCE.coil_accompanist
+}

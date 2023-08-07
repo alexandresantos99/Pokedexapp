@@ -1,0 +1,35 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.alexandresantos.commons'
+    compileSdk Config.INSTANCE.compileSdk
+
+    defaultConfig {
+        minSdk Config.INSTANCE.minSdk
+        targetSdk Config.INSTANCE.targetSdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility Config.INSTANCE.javaVersion
+        targetCompatibility Config.INSTANCE.javaVersion
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation Deps.INSTANCE.pallete
+}

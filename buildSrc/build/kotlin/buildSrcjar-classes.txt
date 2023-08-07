@@ -1,0 +1,1 @@
+/home/pc/AndroidStudioProjects/PokedexbyAlexandre/buildSrc/build/classes/kotlin/main/Config.class:/home/pc/AndroidStudioProjects/PokedexbyAlexandre/buildSrc/build/classes/kotlin/main/Deps.class:/home/pc/AndroidStudioProjects/PokedexbyAlexandre/buildSrc/build/classes/kotlin/main/Versions.class

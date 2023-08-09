@@ -27,7 +27,7 @@ Os Módulos de Libraries englobam tudo o que é de abrangência Cross squad/time
 
 Segue a imagem exemplificando
 
-![](https://github.com/alexandresantos99/Pokedexapp/assets/127161095/55a8a952-4151-4894-939f-4b396bde9257)
+![](https://github.com/alexandresantos99/Pokedexapp/assets/127161095/dff15604-0d03-4f61-b997-af0e5444512c)
 
 
 

@@ -27,11 +27,7 @@ Os Módulos de Libraries englobam tudo o que é de abrangência Cross squad/time
 
 Segue a imagem exemplificando
 
-<p align="center">
-<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/127161095/259508257-dff15604-0d03-4f61-b997-af0e5444512c.jpeg"/>
-</p>
-
-
+![Logo](https://github-production-user-asset-6210df.s3.amazonaws.com/127161095/259508257-dff15604-0d03-4f61-b997-af0e5444512c.jpeg)
 
 # Sobre a feat-pokedex
 
